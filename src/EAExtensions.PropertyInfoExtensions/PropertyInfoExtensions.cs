@@ -1,7 +1,7 @@
 ﻿using EAExtensions.TypeExtensions;
 using System.Reflection;
 
-namespace EAExtensions
+namespace EAExtensions.PropertyInfoExtensions
 {
     public static class Extensions
     {
