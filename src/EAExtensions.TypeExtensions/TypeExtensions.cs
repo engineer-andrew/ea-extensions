@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace EAExtensions.TypeExtensions
 {
-    public static class TypeExtensions
+    public static class Extensions
     {
         public static bool IsNonStringEnumerable(this Type type)
         {

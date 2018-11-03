@@ -2,11 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.1</Version>
+    <Version>0.0.3</Version>
     <Authors>Engineer Andrew</Authors>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Description>A package containing some commonly used extensions for Types in C#.</Description>
-    <IsPackable>true</IsPackable>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/engineer-andrew/ea-extensions/tree/master/src/EAExtensions.TypeExtensions</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
 </Project>

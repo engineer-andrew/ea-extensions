@@ -1,13 +1,13 @@
-﻿using System.Reflection;
+﻿using EAExtensions.TypeExtensions;
+using System.Reflection;
 
-namespace EAExtensions.PropertyInfoExtensions
+namespace EAExtensions
 {
-    public static class PropertyInfoExtensions
+    public static class Extensions
     {
         public static bool IsNonStringEnumerable(this PropertyInfo pi)
         {
-            //return pi != null && pi.PropertyType.IsNonStringEnumerable();
-            return true;
+            return pi != null && pi.PropertyType.IsNonStringEnumerable();
         }
     }
 }
