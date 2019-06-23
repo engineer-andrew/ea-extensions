@@ -6,6 +6,28 @@ namespace EAExtensions.TypeExtensions
 {
     public static class Extensions
     {
+        public static bool IsDateTime(this Type type)
+        {
+            var typeInfo = type.GetTypeInfo();
+            if (typeInfo.IsGenericType && typeInfo.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                // nullable type, check if the nested type is simple.
+                return IsDateTime(typeInfo.GetGenericArguments()[0]);
+            }
+            return type == typeof(DateTime) || type == typeof(DateTimeOffset);
+        }
+
+        public static bool IsDateTimeOffset(this Type type)
+        {
+            var typeInfo = type.GetTypeInfo();
+            if (typeInfo.IsGenericType && typeInfo.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                // nullable type, check if the nested type is simple.
+                return IsDateTimeOffset(typeInfo.GetGenericArguments()[0]);
+            }
+            return type == typeof(DateTimeOffset);
+        }
+
         public static bool IsNonStringEnumerable(this Type type)
         {
             if (type == null || type == typeof(string))
